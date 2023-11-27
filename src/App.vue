@@ -22,7 +22,7 @@ const password = store.loginPlaceholder.try_password;
     <RouterView />
     <FooterComponent />
   </div>
-  <div v-else class="app_container">
+  <div v-else class="app_container app_container-login">
     <LoginComponent />
   </div>
 </template>
@@ -32,5 +32,8 @@ const password = store.loginPlaceholder.try_password;
   height: 100vh;
   max-width: 1440px;
   width: 100%;
+}
+.app_container-login {
+  max-width: unset;
 }
 </style>
