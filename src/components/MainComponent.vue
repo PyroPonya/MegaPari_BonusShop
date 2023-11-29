@@ -2,7 +2,7 @@
   <div class="main_container">
     <!-- <div class="swiper"></div> -->
     <SwiperWideComponent />
-    <div class="grid"></div>
+    <MainGridComponent />
     <div class="slider"></div>
     <div class="slider"></div>
   </div>
@@ -10,7 +10,7 @@
 
 <script setup>
 import SwiperWideComponent from './SwiperWideComponent.vue';
-
+import MainGridComponent from './MainGridComponent.vue';
 </script>
 
 <style scoped></style>
