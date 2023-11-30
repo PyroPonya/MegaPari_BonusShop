@@ -11,15 +11,15 @@ const password = store.loginPlaceholder.try_password;
 </script>
 
 <template>
-  <div v-if="true" class="app_container">
+  <!-- <div v-if="true" class="app_container"> -->
     <!-- @TODO: REVERSE THIS AFTER DONE WITH MAIN PAGE -->
-    <!-- <div
+    <div
     v-if="
       store.loginPlaceholder.try_login == store.loginPlaceholder.login &&
       store.loginPlaceholder.try_password == store.loginPlaceholder.password
     "
     class="app_container"
-  > -->
+  >
     <HeaderComponent />
     <RouterView />
     <FooterComponent />
