@@ -1,0 +1,27 @@
+{
+  "main": {
+    "head_slider": [
+      {
+        "title": "Для тех, кто стремится стать",
+        "fancy_title": "победителем",
+        "subtitle": "Apple iPad Pro (2022) уже в продаже!",
+        "btn_text": "Купить",
+        "img": "wide_slide1_img.png"
+      },
+      {
+        "title": "Для тех, кто стремится стать",
+        "fancy_title": "победителем",
+        "subtitle": "Apple iPad Pro (2022) уже в продаже!",
+        "btn_text": "Купить",
+        "img": "wide_slide1_img.png"
+      },
+      {
+        "title": "Для тех, кто стремится стать",
+        "fancy_title": "победителем",
+        "subtitle": "Apple iPad Pro (2022) уже в продаже!",
+        "btn_text": "Купить",
+        "img": "./icons/wide_slide1_img.png"
+      }
+    ]
+  }
+}

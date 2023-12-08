@@ -14,7 +14,7 @@
     @slideChange="onSlideChange"
   >
     <swiper-slide>
-      <div class="slide_1">
+      <div class="slide">
         <div class="content">
           <div class="title">
             Для тех, кто стремится стать <span class="rainbow">победителем</span>
@@ -26,7 +26,7 @@
       </div>
     </swiper-slide>
     <swiper-slide>
-      <div class="slide_1">
+      <div class="slide">
         <div class="content">
           <div class="title">
             Для тех, кто стремится стать <span class="rainbow">победителем</span>
@@ -38,7 +38,7 @@
       </div>
     </swiper-slide>
     <swiper-slide>
-      <div class="slide_1">
+      <div class="slide">
         <div class="content">
           <div class="title">
             Для тех, кто стремится стать <span class="rainbow">победителем</span>
@@ -49,7 +49,6 @@
         <div class="image"></div>
       </div>
     </swiper-slide>
-    ...
   </swiper>
 </template>
 
@@ -113,7 +112,7 @@ export default {
   object-fit: cover;
 }
 
-.slide_1 {
+.slide {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -123,7 +122,7 @@ export default {
   height: 480px;
   padding: 0 40px;
 }
-.slide_1 .content {
+.slide .content {
   max-width: 548px;
   align-self: center;
   display: flex;
@@ -132,7 +131,7 @@ export default {
   justify-content: center;
   gap: 12px;
 }
-.slide_1 .title {
+.slide .title {
   color: #000;
   font-family: NT Somic;
   font-size: 44px;
@@ -141,7 +140,7 @@ export default {
   line-height: 140%; /* 61.6px */
   text-align: left;
 }
-.slide_1 .rainbow {
+.slide .rainbow {
   background: linear-gradient(91deg, #3e51ff 27.99%, #f14aff 80.83%);
   background-clip: text;
   -webkit-background-clip: text;
@@ -152,7 +151,7 @@ export default {
   font-weight: 600;
   line-height: 140%;
 }
-.slide_1 .subtitle {
+.slide .subtitle {
   color: #7e7e7e;
   font-family: NT Somic;
   font-size: 18px;
@@ -160,7 +159,7 @@ export default {
   font-weight: 500;
   line-height: 140%; /* 25.2px */
 }
-.slide_1 .btn {
+.slide .btn {
   margin-top: 30px;
   display: flex;
   width: 234px;
@@ -181,7 +180,7 @@ export default {
   line-height: 150%; /* 24px */
   cursor: pointer;
 }
-.slide_1 .image {
+.slide .image {
   position: absolute;
   background-image: url('./icons/wide_slide1_img.png');
   background-position: center;
