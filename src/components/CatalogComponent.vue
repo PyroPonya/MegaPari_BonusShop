@@ -1,0 +1,139 @@
+<template>
+  <div class="catalog_container">
+    <div class="catalog_filters">
+      filters
+      <div class="slider_range">
+        <Slider v-model="value" :min="min" :max="max" />
+        <div class="">
+          <div class="categories">
+            <div
+              v-for="category of categories"
+              :key="category.key"
+              class="categories_line"
+            >
+              <Checkbox
+                v-model="selectedCategories"
+                :inputId="category.key"
+                name="category"
+                :value="category.name"
+              />
+              <label :for="category.key">{{ category.name }}</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="catalog_display">
+      display
+      <div>{{ filteredData }}</div>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref, watch } from 'vue';
+import Slider from '@vueform/slider';
+import Checkbox from 'primevue/checkbox';
+import json from '../stores/test.json';
+const data = json;
+// filter values
+const arr = Object.values(data.map((el) => el.value));
+const min = Math.min(...arr);
+const max = Math.max(...arr);
+const value = ref([min, max]);
+let filteredData = data.filter(
+  (el) => el.value >= value.value[0] && el.value <= value.value[1]
+);
+// watch(value, async () => {
+//   filteredData = data.filter(
+//     (el) => el.value >= value.value[0] && el.value <= value.value[1]
+//   );
+// });
+// filter categories
+const categories_pre = Object.values(data.map((el) => el.category));
+const categories = ref([]);
+const uniqueCategories = (list, output) => {
+  let temp = [...new Set(list)];
+  temp.map((el) => output.push({ name: el }));
+};
+uniqueCategories(categories_pre, categories.value);
+const selectedCategories = ref([]);
+// @TODO: here
+watch([value, selectedCategories], async () => {
+  filteredData = data.filter(
+    (el) => el.value >= value.value[0] && el.value <= value.value[1]
+  );
+  [...selectedCategories.value].length == 0
+    ? (filteredData = data.filter(
+        (el) => el.value >= value.value[0] && el.value <= value.value[1]
+      ))
+    : (filteredData = data
+        .filter((el) => el.value >= value.value[0] && el.value <= value.value[1])
+        .filter((el) => [...selectedCategories.value].includes(el.category)));
+});
+// filter brands
+</script>
+
+// Styles for slider-range
+<style src="@vueform/slider/themes/default.css"></style>
+
+<style scoped>
+@layer primevue;
+.catalog_container {
+  padding: 40px 120px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 0px;
+
+  /* @TODO: remove */
+  outline: 1px solid black;
+  min-height: 70vh;
+}
+.catalog_filters {
+  grid-area: 1 / 1 / 3 / 2;
+  outline: 1px solid cyan;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.catalog_display {
+  grid-area: 1 / 2 / 2 / 4;
+  outline: 1px solid pink;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.slider_range {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.categories_line {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+}
+
+@layer primevue {
+  .p-checkbox-input {
+    border: 1.5px solid #9d9d9d;
+    border-radius: 6px;
+  }
+}
+</style>

@@ -1,0 +1,41 @@
+[
+  {
+    "category": "electronics",
+    "value": 10,
+    "name": "electronics_name_1",
+    "brand": "apple"
+  },
+  {
+    "category": "electronics",
+    "value": 40,
+    "name": "electronics_name_2",
+    "brand": "xiaomi"
+  },
+  {
+    "category": "electronics",
+    "value": 70,
+    "name": "electronics_name_3",
+    "brand": "lg"
+  },
+  {
+    "category": "drinks",
+    "value": 20,
+    "name": "drinks_name_1",
+    "brand": "drinks_brand_1"
+  },
+  {
+    "category": "drinks",
+    "value": 50,
+    "name": "drinks_name_2",
+    "brand": "drinks_brand_2"
+  },
+  {
+    "category": "drinks",
+    "value": 80,
+    "name": "drinks_name_3",
+    "brand": "drinks_brand_3"
+  },
+  { "category": "merch", "value": 30, "name": "merch_name_1", "brand": "Megapari" },
+  { "category": "merch", "value": 60, "name": "merch_name_2", "brand": "Megapari" },
+  { "category": "merch", "value": 90, "name": "merch_name_3", "brand": "Megapari" }
+]

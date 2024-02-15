@@ -150,7 +150,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 64px;
 }
