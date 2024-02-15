@@ -1,10 +1,15 @@
 <template>
   <div class="container">
     <div class="left">
-      <div class="logo"></div>
+      <router-link to="/"><div class="logo"></div></router-link>
     </div>
     <div class="right">
-      <div class="btn noselect" @click="store.showMenu = !store.showMenu">Каталог</div>
+      <router-link to="/catalog"
+        ><div class="btn noselect" @click="store.showMenu = !store.showMenu">
+          Каталог
+        </div></router-link
+      >
+      <!-- <div class="btn noselect" @click="store.showMenu = !store.showMenu">Каталог</div> -->
       <div class="searchbox">
         <div class="img_glass"></div>
         <input type="text" class="search" placeholder="Найти" />
