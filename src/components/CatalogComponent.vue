@@ -3,9 +3,12 @@
     <div class="catalog_filters">
       filters
       <div class="slider_range">
+        <div class="subtitle">Price</div>
         <Slider v-model="value" :min="min" :max="max" />
+        <!--  -->
         <div class="">
           <div class="categories">
+            <div class="subtitle">Categories</div>
             <div
               v-for="category of categories"
               :key="category.key"
@@ -18,6 +21,21 @@
                 :value="category.name"
               />
               <label :for="category.key">{{ category.name }}</label>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div v-if="displayBrand" class="">
+          <div class="brands">
+      <div class="subtitle">Brand</div>
+            <div v-for="brand of brands" :key="brand.key" class="brands_line">
+              <Checkbox
+                v-model="selectedBrands"
+                :inputId="brand.key"
+                name="brand"
+                :value="brand.name"
+              />
+              <label :for="brand.key">{{ brand.name }}</label>
             </div>
           </div>
         </div>
@@ -50,26 +68,39 @@ let filteredData = data.filter(
 //   );
 // });
 // filter categories
+const displayBrand = ref(false);
+let brands_pre = Object.values(data.map((el) => el.brand));
+const brands = ref([]);
 const categories_pre = Object.values(data.map((el) => el.category));
 const categories = ref([]);
-const uniqueCategories = (list, output) => {
+const uniqueList = (list, output) => {
   let temp = [...new Set(list)];
   temp.map((el) => output.push({ name: el }));
 };
-uniqueCategories(categories_pre, categories.value);
+uniqueList(categories_pre, categories.value);
+uniqueList(brands_pre, brands.value);
+const selectedBrands = ref([]);
 const selectedCategories = ref([]);
 // @TODO: here
 watch([value, selectedCategories], async () => {
   filteredData = data.filter(
     (el) => el.value >= value.value[0] && el.value <= value.value[1]
   );
-  [...selectedCategories.value].length == 0
-    ? (filteredData = data.filter(
-        (el) => el.value >= value.value[0] && el.value <= value.value[1]
-      ))
-    : (filteredData = data
-        .filter((el) => el.value >= value.value[0] && el.value <= value.value[1])
-        .filter((el) => [...selectedCategories.value].includes(el.category)));
+  if ([...selectedCategories.value].length == 0) {
+    filteredData = data.filter(
+      (el) => el.value >= value.value[0] && el.value <= value.value[1]
+    );
+    displayBrand.value = false;
+  } else {
+    filteredData = data
+      .filter((el) => el.value >= value.value[0] && el.value <= value.value[1])
+      .filter((el) => [...selectedCategories.value].includes(el.category));
+    brands_pre = [];
+    brands_pre = Object.values(filteredData.map((el) => el.brand));
+    brands.value = [];
+    uniqueList(brands_pre, brands.value);
+    displayBrand.value = true;
+  }
 });
 // filter brands
 </script>
@@ -98,7 +129,8 @@ watch([value, selectedCategories], async () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: flex-start;
 }
 .catalog_display {
   grid-area: 1 / 2 / 2 / 4;
@@ -107,7 +139,8 @@ watch([value, selectedCategories], async () => {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: flex-start;
 }
 .slider_range {
   width: 90%;
@@ -115,14 +148,16 @@ watch([value, selectedCategories], async () => {
   flex-direction: column;
   gap: 40px;
 }
-.categories {
+.categories,
+.brands {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 10px;
 }
-.categories_line {
+.categories_line,
+.brands_line {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
