@@ -15,6 +15,11 @@ const router = createRouter({
       name: 'catalog',
       component: CatalogView,
     },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'home',
+      component: MainView,
+    },
     // {
     //   path: '/about',
     //   name: 'about',
