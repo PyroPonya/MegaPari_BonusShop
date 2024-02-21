@@ -5,8 +5,31 @@
     </div>
     <div class="right">
       <router-link to="/catalog"
-        ><div class="btn noselect" @click="store.showMenu = !store.showMenu">
+        ><div class="btn noselect btn_catalog" @click="store.showMenu = !store.showMenu">
           Каталог
+          <div v-if="store.showMenu == true" class="menu">
+            <div class="menu_items">
+              <div class="items_el" @click="store.showMenu = false">All products</div>
+              <div class="items_el" @click="store.showMenu = false">Discounts</div>
+              <div class="items_el" @click="store.showMenu = false">Electronics</div>
+              <div class="items_el" @click="store.showMenu = false">Alcohol</div>
+              <div class="items_el" @click="store.showMenu = false">Tobacco</div>
+              <div class="items_el" @click="store.showMenu = false">Services</div>
+              <div class="items_el" @click="store.showMenu = false">Merch</div>
+              <div class="items_el" @click="store.showMenu = false">Sport</div>
+              <div class="items_el" @click="store.showMenu = false">Other</div>
+            </div>
+            <div class="separator"></div>
+            <div class="menu_subitems">
+              <div class="subitems_el" @click="store.showMenu = false">All</div>
+              <div class="subitems_el" @click="store.showMenu = false">Phones</div>
+              <div class="subitems_el" @click="store.showMenu = false">Smart watches</div>
+              <div class="subitems_el" @click="store.showMenu = false">Headphones</div>
+              <div class="subitems_el" @click="store.showMenu = false">
+                Laptops, tablets
+              </div>
+            </div>
+          </div>
         </div></router-link
       >
       <!-- <div class="btn noselect" @click="store.showMenu = !store.showMenu">Каталог</div> -->
@@ -17,27 +40,6 @@
         <div class="img_cart"></div>
       </div>
       <div class="profile">Profile&nbsp;section</div>
-    </div>
-    <div v-if="store.showMenu == true" class="menu">
-      <div class="menu_items">
-        <div class="items_el" @click="store.showMenu = false">All products</div>
-        <div class="items_el" @click="store.showMenu = false">Discounts</div>
-        <div class="items_el" @click="store.showMenu = false">Electronics</div>
-        <div class="items_el" @click="store.showMenu = false">Alcohol</div>
-        <div class="items_el" @click="store.showMenu = false">Tobacco</div>
-        <div class="items_el" @click="store.showMenu = false">Services</div>
-        <div class="items_el" @click="store.showMenu = false">Merch</div>
-        <div class="items_el" @click="store.showMenu = false">Sport</div>
-        <div class="items_el" @click="store.showMenu = false">Other</div>
-      </div>
-      <div class="separator"></div>
-      <div class="menu_subitems">
-        <div class="subitems_el" @click="store.showMenu = false">All</div>
-        <div class="subitems_el" @click="store.showMenu = false">Phones</div>
-        <div class="subitems_el" @click="store.showMenu = false">Smart watches</div>
-        <div class="subitems_el" @click="store.showMenu = false">Headphones</div>
-        <div class="subitems_el" @click="store.showMenu = false">Laptops, tablets</div>
-      </div>
     </div>
   </div>
 </template>
@@ -170,11 +172,15 @@ const storeRefs = storeToRefs(useGlobalStore());
   user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
 }
+.btn_catalog {
+  position: relative;
+}
 .menu {
   position: absolute;
   z-index: 2;
-  top: 100%;
-  right: 30px;
+  top: calc(100% + 20px);
+  /* right: 30px; */
+  left: 0px;
   min-width: 50%;
   min-height: 200px;
   border-radius: 20px;
