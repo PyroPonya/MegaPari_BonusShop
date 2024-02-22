@@ -1,45 +1,40 @@
 <template>
   <div class="catalog_container">
     <div class="catalog_filters">
-      filters
-      <div class="slider_range">
-        <div class="subtitle">Price</div>
-        <Slider v-model="value" :min="min" :max="max" />
-        <!--  -->
-        <div class="">
-          <div class="categories">
-            <div class="subtitle">Categories</div>
-            <div
-              v-for="category of categories"
-              :key="category.key"
-              class="categories_line"
-            >
-              <Checkbox
-                v-model="selectedCategories"
-                :inputId="category.key"
-                name="category"
-                :value="category.name"
-              />
-              <label :for="category.key">{{ category.name }}</label>
-            </div>
-          </div>
-        </div>
-        <!--  -->
-        <div v-if="displayBrand" class="">
-          <div class="brands">
-      <div class="subtitle">Brand</div>
-            <div v-for="brand of brands" :key="brand.key" class="brands_line">
-              <Checkbox
-                v-model="selectedBrands"
-                :inputId="brand.key"
-                name="brand"
-                :value="brand.name"
-              />
-              <label :for="brand.key">{{ brand.name }}</label>
-            </div>
-          </div>
+      <!-- categories start -->
+      <div class="categories">
+        <div class="subtitle">Categories</div>
+        <div v-for="category of categories" :key="category.key" class="categories_line">
+          <Checkbox
+            v-model="selectedCategories"
+            :inputId="category.key"
+            name="category"
+            :value="category.name"
+          />
+          <label :for="category.key">{{ category.name }}</label>
         </div>
       </div>
+      <!-- categories end -->
+      <div class="slider_container">
+        <div class="subtitle">Price</div>
+        <div class="slider_range">
+          <Slider v-model="value" :min="min" :max="max" />
+        </div>
+      </div>
+      <!-- brands start -->
+      <div v-if="displayBrand" class="brands">
+        <div class="subtitle">Brand</div>
+        <div v-for="brand of brands" :key="brand.key" class="brands_line">
+          <Checkbox
+            v-model="selectedBrands"
+            :inputId="brand.key"
+            name="brand"
+            :value="brand.name"
+          />
+          <label :for="brand.key">{{ brand.name }}</label>
+        </div>
+      </div>
+      <!-- brands end -->
     </div>
     <div class="catalog_display">
       display
@@ -124,13 +119,13 @@ watch([value, selectedCategories], async () => {
 }
 .catalog_filters {
   grid-area: 1 / 1 / 3 / 2;
-  outline: 1px solid cyan;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
   justify-content: flex-start;
+  gap: 24px;
 }
 .catalog_display {
   grid-area: 1 / 2 / 2 / 4;
@@ -142,11 +137,20 @@ watch([value, selectedCategories], async () => {
   /* justify-content: center; */
   justify-content: flex-start;
 }
+.slider_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
 .slider_range {
   width: 90%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+}
+.subtitle {
+  width: 100%;
 }
 .categories,
 .brands {
@@ -154,7 +158,9 @@ watch([value, selectedCategories], async () => {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 12px;
+  /* gap: 24px; */
+  width: 100%;
 }
 .categories_line,
 .brands_line {
@@ -163,6 +169,10 @@ watch([value, selectedCategories], async () => {
   align-items: flex-start;
   justify-content: center;
   gap: 12px;
+}
+.categories_line > label,
+.brands_line > label {
+  text-transform: capitalize;
 }
 
 @layer primevue {
