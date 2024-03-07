@@ -37,8 +37,17 @@
       <!-- brands end -->
     </div>
     <div class="catalog_display">
-      display
-      <div>{{ filteredData }}</div>
+      <!-- <div>{{ filteredData }}</div> -->
+      <div class="item" v-for="el in filteredData">
+        <img :src="el.img" alt="item_image" class="item_img" />
+        <div class="item_footer">
+          <div class="item_price">
+            {{ el.value }} MP
+            <div class="item_price_bait">{{ el.value * 1.2 }} MP</div>
+          </div>
+          <div class="item_name">{{ el.name }}</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -47,26 +56,32 @@
 import { ref, watch } from 'vue';
 import Slider from '@vueform/slider';
 import Checkbox from 'primevue/checkbox';
-import json from '../stores/test.json';
-const data = json;
+import { useGlobalStore } from '@/stores/store';
+const store = useGlobalStore();
+// import json from '../stores/test.json';
+// const data = json;
+const data = store.data;
+const catalog = data.catalog;
+console.log(store.data);
+console.log(catalog);
 // filter values
-const arr = Object.values(data.map((el) => el.value));
+const arr = Object.values(catalog.map((el) => el.value));
 const min = Math.min(...arr);
 const max = Math.max(...arr);
 const value = ref([min, max]);
-let filteredData = data.filter(
+let filteredData = catalog.filter(
   (el) => el.value >= value.value[0] && el.value <= value.value[1]
 );
 // watch(value, async () => {
-//   filteredData = data.filter(
+//   filteredData = catalog.filter(
 //     (el) => el.value >= value.value[0] && el.value <= value.value[1]
 //   );
 // });
 // filter categories
 const displayBrand = ref(false);
-let brands_pre = Object.values(data.map((el) => el.brand));
+let brands_pre = Object.values(catalog.map((el) => el.brand));
 const brands = ref([]);
-const categories_pre = Object.values(data.map((el) => el.category));
+const categories_pre = Object.values(catalog.map((el) => el.category));
 const categories = ref([]);
 const uniqueList = (list, output) => {
   let temp = [...new Set(list)];
@@ -78,16 +93,16 @@ const selectedBrands = ref([]);
 const selectedCategories = ref([]);
 // @TODO: here
 watch([value, selectedCategories], async () => {
-  filteredData = data.filter(
+  filteredData = catalog.filter(
     (el) => el.value >= value.value[0] && el.value <= value.value[1]
   );
   if ([...selectedCategories.value].length == 0) {
-    filteredData = data.filter(
+    filteredData = catalog.filter(
       (el) => el.value >= value.value[0] && el.value <= value.value[1]
     );
     displayBrand.value = false;
   } else {
-    filteredData = data
+    filteredData = catalog
       .filter((el) => el.value >= value.value[0] && el.value <= value.value[1])
       .filter((el) => [...selectedCategories.value].includes(el.category));
     brands_pre = [];
@@ -106,36 +121,44 @@ watch([value, selectedCategories], async () => {
 <style scoped>
 @layer primevue;
 .catalog_container {
-  padding: 40px 120px;
-  display: grid;
+  /* padding: 40px 120px; */
+  padding: 40px 0px;
+  margin: auto;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 40px;
+  grid-row-gap: 0px; */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 40px;
   grid-row-gap: 0px;
 
-  /* @TODO: remove */
-  outline: 1px solid black;
   min-height: 70vh;
+  max-width: 1200px;
 }
 .catalog_filters {
-  grid-area: 1 / 1 / 3 / 2;
+  /* grid-area: 1 / 1 / 3 / 2; */
+  grid-area: 1 / 1 / 2 / 2;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
   justify-content: flex-start;
+  max-width: 276px;
   gap: 24px;
 }
 .catalog_display {
-  grid-area: 1 / 2 / 2 / 4;
-  outline: 1px solid pink;
+  /* grid-area: 1 / 2 / 2 / 4; */
+  grid-area: 1 / 2 / 2 / 6;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* justify-content: center; */
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
 }
 .slider_container {
   width: 100%;
@@ -173,6 +196,53 @@ watch([value, selectedCategories], async () => {
 .categories_line > label,
 .brands_line > label {
   text-transform: capitalize;
+}
+/* item styles */
+.item {
+  background-color: #ffffff;
+  border-radius: 16px;
+  width: 286px;
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.item .item_img {
+  border-radius: 16px 16px 0 0;
+  max-width: 286px;
+  max-height: 293px;
+}
+.item .item_footer {
+  padding: 16px;
+  width: 100%;
+  max-height: 132px;
+}
+.item .item_price {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: flex-start;
+  gap: 8px;
+}
+.item .item_price_bait {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  text-decoration: line-through;
+  text-align: center;
+  color: #6c6c6c;
+  /* padding: 4.5px; */
+}
+.item .item_name {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #6c6c6c;
 }
 
 @layer primevue {

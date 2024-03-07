@@ -23,5 +23,931 @@
         "img": "./icons/wide_slide1_img.png"
       }
     ]
-  }
+  },
+  "catalog": [
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Акустическая система Amphion Helium510 Black",
+      "brand": "Amphion",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Интегральный усилитель Shanling EA5",
+      "brand": "Shanling",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Проигрыватель винила Pro-Ject Automat A1",
+      "brand": "Pro-Ject",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "PartyBox1000",
+      "brand": "PartyBox",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "JBL Xtreme 3",
+      "brand": "JBL",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "JBL Partybox 310",
+      "brand": "JBL",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "JBL Boombox 3 Wi-Fi",
+      "brand": "JBL",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Apple Watch Ultra 2 Olive",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Apple Watch Ultra 2 Blue",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Apple Watch Ultra 2 Indigo",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Apple Watch Series 9 Black",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Apple Watch Series 9 Silver",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Apple Watch Series 9 Starlight",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Apple Watch Series 9 Pink",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Apple Watch Series 9 Red",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Apple Watch SE Black",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Apple Watch SE Starlight",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "electronics_name_1",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Apple Watch SE Silver",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "iPad Pro 12.9-inch display s",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "iPad Pro 12.9-inch display b",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "iPad Pro 11-inch display b",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "iPad Pro 11-inch display s",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Macbook Color Midnight",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Macbook Color Starlight",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Macbook Color Space Grey",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Macbook Color Silver",
+      "brand": "Apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Xbox s1",
+      "brand": "Microsoft",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "PS5 Spider",
+      "brand": "Sony",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "PS5",
+      "brand": "Sony",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "HomePod Color Midnight",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "HomePod Color White",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "AirPods Max Color Space Grey",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "AirPods Max Color Sky Blue",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "AirPods Max Color Green",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "AirPods Max Color Pink",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "AirPods Max Color Silver",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "AirPods (3rd generation) with MagSafe Charging Case",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Iphone 15 pro max bege",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Iphone 15 pro max blue",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Iphone 15 pro max white",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "electronics",
+      "value": 10,
+      "name": "Iphone 15 pro max black",
+      "brand": "apple",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Barrell Private Release Rum B716",
+      "brand": "Barrell",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Bayou Reserve Rum",
+      "brand": "Bayou",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Angostura 1919",
+      "brand": "Angostura",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "1800 Milenio Extra Anejo",
+      "brand": "1800",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "1800 Cristalino",
+      "brand": "1800",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "1800 Anejo",
+      "brand": "1800",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Babicka Wormwood Vodka",
+      "brand": "Babicka",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Belvedere Bartezek Lake Vodka",
+      "brand": "Belvedere",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Black Cow Vodka",
+      "brand": "Black Cow",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Crystal Head Onyx Vodka",
+      "brand": "Crystal Head",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Amazzoni Gin Rio Negro",
+      "brand": "Amazzoni",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "AMASS Gin",
+      "brand": "AMASS",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "58 Gin",
+      "brand": "58",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Drouin Experimental Caroni Angels",
+      "brand": "Drouin",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Chateau du Breuil 20 Year Old",
+      "brand": "Chateau",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Adrien Camut 18 Year Old",
+      "brand": "Adrien",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "ABK6 Single Estate Extra",
+      "brand": "ABK6",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "ABK6 Reserve Artist Collection",
+      "brand": "ABK6",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "A E Dor No 7",
+      "brand": "A E Dor",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Opus One Overture 2022 Release",
+      "brand": "Opus",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Opus One Overture 2021 Release",
+      "brand": "Opus",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Quintessa Half 2019",
+      "brand": "Quintessa",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Massetino 2018",
+      "brand": "Massetino",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Massetino 2019",
+      "brand": "Massetino",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Castello di Amorosa Il Barone 2006",
+      "brand": "Castello",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Le Serre Nuove Tenuta dell`Ornellaia 300cl 2020",
+      "brand": "Ornellaia",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Ornellaia 2011",
+      "brand": "Ornellaia",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Krug Vintage 1995",
+      "brand": "Krug",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Krug Grande Cuvee Edition 168 Magnum",
+      "brand": "Krug",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Krug Vintage 2008",
+      "brand": "Krug",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Louis Roederer Vintage (Ex Estate) 1997",
+      "brand": "Louis Roederer",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Louis Roederer Collection 243",
+      "brand": "Louis Roederer",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Louis Roederer Brut Nature Rose Philippe Starck 2015",
+      "brand": "Louis Roederer",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Ruinart Rose",
+      "brand": "Ruinart",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Ruinart Blanc de Blancs Half",
+      "brand": "Ruinart",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Ruinart Brut",
+      "brand": "Ruinart",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Pol Roger Vintage 2015",
+      "brand": "Pol Roger",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Pol Roger Pure",
+      "brand": "Pol Roger",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Laurent Perrier Rose Brut",
+      "brand": "Laurent Perrier",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Dore Cuvee Rose",
+      "brand": "Dore Cuvee",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Laurent Perrier La Cuvee",
+      "brand": "Laurent Perrier",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Dom Perignon 2002",
+      "brand": "Dom Perignon",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Dom Perignon Rose 2003",
+      "brand": "Dom Perignon",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Bollinger Rose 300cl",
+      "brand": "Bollinger",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Bollinger Special Cuvee",
+      "brand": "Bollinger",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Bollinger Rose Half",
+      "brand": "Bollinger",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Bollinger Special Cuvee Half",
+      "brand": "Bollinger",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Ardbeg Uigeadail",
+      "brand": "Ardbeg",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Ardbeg An Oa",
+      "brand": "Ardbeg",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Laphroaig 10 Year Old Sherry Oak",
+      "brand": "Laphroaig",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Balvenie 12 Year Old Doublewood 20cl",
+      "brand": "Balvenie",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Glenlivet 12 Year Old",
+      "brand": "Glenlivet",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Lagavulin 8 Year Old",
+      "brand": "Lagavulin",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Macallan 12 Year Old Double Cask",
+      "brand": "Macallan",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "drinks",
+      "value": 20,
+      "name": "Johnnie Walker Double Black",
+      "brand": "Johnnie Walker",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "Black",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "Black & White",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "Dead By Daylight",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "KOI",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "Thinker",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "San Francisco Shock",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "NRG",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "Guild Wars 2",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "Black & Red",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "Glytch Energy",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "Team Immortals",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "Bananya Cat",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "Human Cat",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "gaming-chairs",
+      "value": 90,
+      "name": "Grey",
+      "brand": "gaming-chairs",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "golf clubs",
+      "value": 90,
+      "name": "RBZ SPEEDLITE WOMEN'S SET",
+      "brand": "RBZ",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "golf clubs",
+      "value": 90,
+      "name": "KALEA PREMIER SET",
+      "brand": "KALEA",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "golf clubs",
+      "value": 90,
+      "name": "RBZ SPEEDLITE SET",
+      "brand": "RBZ",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "golf clubs",
+      "value": 90,
+      "name": "STEALTH HD WOMENS COMBO SET",
+      "brand": "STEALTH",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "golf clubs",
+      "value": 90,
+      "name": "STEALTH HD COMBO SET",
+      "brand": "STEALTH",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка ACDC - Black Ice",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Avicii - True",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка System Of A Down - Toxicity",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Eminem The Marshall Mathers LP",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Dr. Dre - Compton",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Hans Zimmer - Interstellar (Original Motion Picture Soundtrack Expanded Edition) LP",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Lana Del Rey - Honeymoon",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Lana Del Rey - Ultraviolence 2LP",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка LED ZEPPELIN LED ZEPPELIN I",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Kendrick Lamar - Damn",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Arctic Monkeys - AM",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка OST Pulp Fiction LP",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Nirvana - In Utero",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Nirvana - Nevermind",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Daft Punk – Random Access Memories (10th Anniversary Edition) 3LP",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    },
+    {
+      "category": "audio records",
+      "value": 90,
+      "name": "Пластинка Pink Floyd - The Dark Side Of The Moon",
+      "brand": "Megapari",
+      "img": "https://placehold.co/290x290"
+    }
+  ]
 }

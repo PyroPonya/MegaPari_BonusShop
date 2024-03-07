@@ -73,6 +73,7 @@ const storeRefs = storeToRefs(useGlobalStore());
   gap: 16px;
   /* @TODO: check DIS NUTZ */
   flex-wrap: wrap;
+  /* flex-wrap: nowrap; */
   /* @TODO: NUTZ end */
 }
 .logo {

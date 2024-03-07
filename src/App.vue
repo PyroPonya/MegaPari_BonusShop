@@ -8,6 +8,26 @@ import { useGlobalStore } from '@/stores/store';
 const store = useGlobalStore();
 const login = store.loginPlaceholder.try_login;
 const password = store.loginPlaceholder.try_password;
+// id: 67ff0740-988a-4679-bccb-9a7036d8415e
+
+const getData = () => {
+  fetch(
+    'https://getpantry.cloud/apiv1/pantry/67ff0740-988a-4679-bccb-9a7036d8415e/basket/MPShop'
+  )
+    .then((response) => response.text())
+    .then((response) => {
+      const data = JSON.parse(response);
+      console.log(data);
+      store.data = data;
+      // console.log('response: ', JSON.parse(response));
+      console.log('response: SUCCESSFUL');
+    })
+    .catch((err) => console.log(err));
+  // console.log(store.data);
+  return true;
+};
+// @TODO: pulls data from remote
+getData();
 </script>
 
 <template>
