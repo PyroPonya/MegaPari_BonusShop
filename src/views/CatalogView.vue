@@ -1,11 +1,12 @@
 <template>
   <div class="container">
-    <CatalogComponent />
+    <CatalogComponent :category="props.category" />
   </div>
 </template>
 
 <script setup>
 import CatalogComponent from '../components/CatalogComponent.vue';
+const props = defineProps(['category']);
 </script>
 
 <style scoped>

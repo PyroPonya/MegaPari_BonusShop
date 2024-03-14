@@ -12,9 +12,10 @@ const router = createRouter({
       component: MainView,
     },
     {
-      path: '/catalog',
+      path: '/catalog/:category',
       name: 'catalog',
       component: CatalogView,
+      props: true,
     },
     {
       path: '/:pathMatch(.*)*',

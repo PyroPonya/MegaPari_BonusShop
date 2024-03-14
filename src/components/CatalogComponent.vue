@@ -37,6 +37,7 @@
       <!-- brands end -->
     </div>
     <div class="catalog_display">
+      <!-- <div style="color: black">{{ category }}</div> -->
       <!-- <div>{{ filteredData }}</div> -->
       <div class="item" v-for="el in filteredData">
         <img :src="el.img" alt="item_image" class="item_img" />
@@ -58,12 +59,11 @@ import Slider from '@vueform/slider';
 import Checkbox from 'primevue/checkbox';
 import { useGlobalStore } from '@/stores/store';
 const store = useGlobalStore();
+const props = defineProps(['category']);
 // import json from '../stores/test.json';
 // const data = json;
 const data = store.data;
 const catalog = data.catalog;
-console.log(store.data);
-console.log(catalog);
 // filter values
 const arr = Object.values(catalog.map((el) => el.value));
 const min = Math.min(...arr);
@@ -91,6 +91,17 @@ uniqueList(categories_pre, categories.value);
 uniqueList(brands_pre, brands.value);
 const selectedBrands = ref([]);
 const selectedCategories = ref([]);
+if (props.category !== 'all') {
+  selectedCategories.value = [props.category];
+  filteredData = catalog
+    .filter((el) => el.value >= value.value[0] && el.value <= value.value[1])
+    .filter((el) => [...selectedCategories.value].includes(el.category));
+  brands_pre = [];
+  brands_pre = Object.values(filteredData.map((el) => el.brand));
+  brands.value = [];
+  uniqueList(brands_pre, brands.value);
+  displayBrand.value = true;
+}
 // @TODO: here
 watch([value, selectedCategories], async () => {
   filteredData = catalog.filter(

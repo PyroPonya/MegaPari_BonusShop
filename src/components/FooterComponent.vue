@@ -2,14 +2,18 @@
   <div class="container">
     <div class="top">
       <div class="left">
-        <div class="logo"></div>
+        <router-link to="/"><div class="logo"></div></router-link>
       </div>
       <div class="right">
         <div class="socials">
-          <div class="el vk"></div>
-          <div class="el twitter"></div>
-          <div class="el insta"></div>
-          <div class="el telegram"></div>
+          <a class="el facebook" href="https://www.facebook.com/mpworldwide/"> </a>
+          <a class="el twitter" href="https://x.com/megapari_world?s=35"> </a>
+          <a
+            class="el insta"
+            href="https://www.instagram.com/megapari_worldwide?igsh=ZGRsZXg1NHB6NmFr"
+          >
+          </a>
+          <a class="el telegram" href="https://t.me/megapari_official_en"> </a>
         </div>
       </div>
     </div>
@@ -67,9 +71,12 @@
 }
 .logo {
   background-image: url('./icons/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   width: 132.243px;
-  height: 16.176px;
+  /* height: 16.176px; */
+  height: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -112,17 +119,21 @@
   -moz-outline: 1px solid #b9b9b9;
   -webkit-outline: 1px solid #b9b9b9;
 }
-.socials > .vk {
-  background-image: url('./icons/vk.svg');
+.socials > .facebook {
+  background-image: url('./icons/facebook.svg');
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  height: 32px;
+  width: 32px;
 }
 .socials > .twitter {
   background-image: url('./icons/twitter.svg');
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  height: 32px;
+  width: 32px;
 }
 .socials > .insta {
   background-image: url('./icons/insta.svg');

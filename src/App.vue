@@ -8,8 +8,9 @@ import { useGlobalStore } from '@/stores/store';
 const store = useGlobalStore();
 const login = store.loginPlaceholder.try_login;
 const password = store.loginPlaceholder.try_password;
+// TOP LEVEL SECURITY BEWARE LULz
 // id: 67ff0740-988a-4679-bccb-9a7036d8415e
-
+// basket: MPShop
 const getData = () => {
   fetch(
     'https://getpantry.cloud/apiv1/pantry/67ff0740-988a-4679-bccb-9a7036d8415e/basket/MPShop'
@@ -17,7 +18,7 @@ const getData = () => {
     .then((response) => response.text())
     .then((response) => {
       const data = JSON.parse(response);
-      console.log(data);
+      // console.log(data);
       store.data = data;
       // console.log('response: ', JSON.parse(response));
       console.log('response: SUCCESSFUL');

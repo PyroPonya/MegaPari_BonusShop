@@ -4,35 +4,52 @@
       <router-link to="/"><div class="logo"></div></router-link>
     </div>
     <div class="right">
-      <router-link to="/catalog"
-        ><div class="btn noselect btn_catalog" @click="store.showMenu = !store.showMenu">
-          Каталог
-          <div v-if="store.showMenu == true" class="menu">
-            <div class="menu_items">
-              <div class="items_el" @click="store.showMenu = false">All products</div>
-              <div class="items_el" @click="store.showMenu = false">Discounts</div>
-              <div class="items_el" @click="store.showMenu = false">Electronics</div>
-              <div class="items_el" @click="store.showMenu = false">Alcohol</div>
-              <div class="items_el" @click="store.showMenu = false">Tobacco</div>
-              <div class="items_el" @click="store.showMenu = false">Services</div>
-              <div class="items_el" @click="store.showMenu = false">Merch</div>
-              <div class="items_el" @click="store.showMenu = false">Sport</div>
-              <div class="items_el" @click="store.showMenu = false">Other</div>
+      <div class="btn noselect btn_catalog" @click="store.showMenu = !store.showMenu">
+        Каталог
+        <div v-if="store.showMenu == true" class="menu">
+          <div class="menu_items" @click.prevent="store.showMenu = !store.showMenu">
+            <router-link
+              to="/catalog/all"
+              :category="'all'"
+              class="items_el"
+              @click.prevent="store.showMenu = !store.showMenu"
+            >
+              All products
+            </router-link>
+            <router-link
+              :to="'/catalog/' + category.name"
+              v-for="category of categories"
+              :key="category.key"
+              class="items_el"
+              @click.prevent="store.showMenu = !store.showMenu"
+            >
+              {{ category.name }}
+            </router-link>
+          </div>
+          <div class="separator"></div>
+          <div class="menu_subitems">
+            <router-link
+              to="/catalog/all"
+              :category="'all'"
+              @click="store.showMenu = !store.showMenu"
+            >
+              <div class="items_el" @click="store.showMenu = !store.showMenu">All</div>
+            </router-link>
+            <div class="subitems_el" @click="store.showMenu = !store.showMenu">
+              Phones
             </div>
-            <div class="separator"></div>
-            <div class="menu_subitems">
-              <div class="subitems_el" @click="store.showMenu = false">All</div>
-              <div class="subitems_el" @click="store.showMenu = false">Phones</div>
-              <div class="subitems_el" @click="store.showMenu = false">Smart watches</div>
-              <div class="subitems_el" @click="store.showMenu = false">Headphones</div>
-              <div class="subitems_el" @click="store.showMenu = false">
-                Laptops, tablets
-              </div>
+            <div class="subitems_el" @click="store.showMenu = !store.showMenu">
+              Smart watches
+            </div>
+            <div class="subitems_el" @click="store.showMenu = !store.showMenu">
+              Headphones
+            </div>
+            <div class="subitems_el" @click="store.showMenu = !store.showMenu">
+              Laptops, tablets
             </div>
           </div>
-        </div></router-link
-      >
-      <!-- <div class="btn noselect" @click="store.showMenu = !store.showMenu">Каталог</div> -->
+        </div>
+      </div>
       <div class="searchbox">
         <div class="img_glass"></div>
         <input type="text" class="search" placeholder="Найти" />
@@ -47,8 +64,20 @@
 <script setup>
 import { useGlobalStore } from '@/stores/store';
 import { storeToRefs } from 'pinia';
+import { ref } from 'vue';
 const store = useGlobalStore();
 const storeRefs = storeToRefs(useGlobalStore());
+// import json from '../stores/test.json';
+// const data = json;
+const data = store.data;
+const catalog = data.catalog;
+const categories_pre = Object.values(catalog.map((el) => el.category));
+const categories = ref([]);
+const uniqueList = (list, output) => {
+  let temp = [...new Set(list)];
+  temp.map((el) => output.push({ name: el }));
+};
+uniqueList(categories_pre, categories.value);
 </script>
 
 <style scoped>
@@ -78,9 +107,12 @@ const storeRefs = storeToRefs(useGlobalStore());
 }
 .logo {
   background-image: url('./icons/logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   width: 132.243px;
-  height: 16.176px;
+  /* height: 16.176px; */
+  height: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -200,8 +232,9 @@ const storeRefs = storeToRefs(useGlobalStore());
   display: flex;
   flex-direction: column;
 }
-.menu .menu_items .items_el,
-.menu .menu_subitems .subitems_el {
+.menu .items_el,
+.menu .subitems_el {
+  text-transform: capitalize;
   color: #141414;
   font-family: Inter;
   font-size: 16px;
@@ -215,9 +248,9 @@ const storeRefs = storeToRefs(useGlobalStore());
   align-self: stretch;
   min-width: 215px;
 }
-.menu .menu_items .items_el:hover,
+.menu .items_el:hover,
 .btn:hover,
-.menu .menu_subitems .subitems_el:hover {
+.menu .subitems_el:hover {
   border-radius: 12px;
   background: #f0efef;
   cursor: pointer;
