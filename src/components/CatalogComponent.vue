@@ -107,10 +107,12 @@ watch([value, selectedCategories], async () => {
   filteredData = catalog.filter(
     (el) => el.value >= value.value[0] && el.value <= value.value[1]
   );
+  // selectedBrands.value = [];
   if ([...selectedCategories.value].length == 0) {
     filteredData = catalog.filter(
       (el) => el.value >= value.value[0] && el.value <= value.value[1]
     );
+    selectedBrands.value = [];
     displayBrand.value = false;
   } else {
     filteredData = catalog
@@ -120,10 +122,26 @@ watch([value, selectedCategories], async () => {
     brands_pre = Object.values(filteredData.map((el) => el.brand));
     brands.value = [];
     uniqueList(brands_pre, brands.value);
+    selectedBrands.value = [];
     displayBrand.value = true;
   }
 });
 // filter brands
+watch([value, selectedBrands], async () => {
+  if (selectedBrands.value.length >= 1) {
+    // filteredData = filteredData.filter((el) =>
+    //   [...selectedBrands.value].includes(el.brand)
+    // );
+    filteredData = catalog
+      .filter((el) => el.value >= value.value[0] && el.value <= value.value[1])
+      .filter((el) => [...selectedCategories.value].includes(el.category))
+      .filter((el) => [...selectedBrands.value].includes(el.brand));
+  } else {
+    filteredData = catalog
+      .filter((el) => el.value >= value.value[0] && el.value <= value.value[1])
+      .filter((el) => [...selectedCategories.value].includes(el.category));
+  }
+});
 </script>
 
 // Styles for slider-range
