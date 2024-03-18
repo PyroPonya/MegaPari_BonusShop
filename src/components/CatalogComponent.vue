@@ -44,7 +44,7 @@
         <div class="item_footer">
           <div class="item_price">
             {{ el.value }} MP
-            <div class="item_price_bait">{{ el.value * 1.2 }} MP</div>
+            <div class="item_price_bait">{{ Math.floor(el.value * 1.2) }} MP</div>
           </div>
           <div class="item_name">{{ el.name }}</div>
         </div>
