@@ -13,40 +13,19 @@
     @swiper="onSwiper"
     @slideChange="onSlideChange"
   >
-    <swiper-slide>
+    <swiper-slide v-for="el in store.data.home['1_ad_slider']">
       <div class="slide">
         <div class="content">
           <div class="title">
-            Для тех, кто стремится стать <span class="rainbow">победителем</span>
+            {{ el.title }}
+            <div>
+              <span class="rainbow">{{ el.fancy_title }}</span>
+            </div>
           </div>
-          <div class="subtitle">Apple iPad Pro (2022) уже в продаже!</div>
-          <div class="btn">Купить</div>
+          <div class="subtitle">{{ el.subtitle }}</div>
+          <div class="btn">{{ el.btn_text }}</div>
         </div>
-        <div class="image"></div>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="slide">
-        <div class="content">
-          <div class="title">
-            Для тех, кто стремится стать <span class="rainbow">победителем</span>
-          </div>
-          <div class="subtitle">Apple iPad Pro (2022) уже в продаже!</div>
-          <div class="btn">Купить</div>
-        </div>
-        <div class="image"></div>
-      </div>
-    </swiper-slide>
-    <swiper-slide>
-      <div class="slide">
-        <div class="content">
-          <div class="title">
-            Для тех, кто стремится стать <span class="rainbow">победителем</span>
-          </div>
-          <div class="subtitle">Apple iPad Pro (2022) уже в продаже!</div>
-          <div class="btn">Купить</div>
-        </div>
-        <div class="image"></div>
+        <div class="image" :style="{ backgroundImage: 'url(' + el.img + ')' }"></div>
       </div>
     </swiper-slide>
   </swiper>
@@ -59,6 +38,7 @@ import 'swiper/css/pagination';
 import { Autoplay, Pagination } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
+import { useGlobalStore } from '@/stores/store';
 
 export default {
   components: {
@@ -66,6 +46,7 @@ export default {
     SwiperSlide,
   },
   setup() {
+    const store = useGlobalStore();
     const onSwiper = (swiper) => {
       // console.log(swiper);
     };
@@ -83,6 +64,7 @@ export default {
       onSwiper,
       onSlideChange,
       modules: [Autoplay, Pagination],
+      store,
     };
   },
 };

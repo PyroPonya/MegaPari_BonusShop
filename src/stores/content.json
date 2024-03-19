@@ -1,26 +1,158 @@
 {
-  "main": {
-    "head_slider": [
+  "home": {
+    "1_ad_slider": [
       {
-        "title": "Для тех, кто стремится стать",
-        "fancy_title": "победителем",
-        "subtitle": "Apple iPad Pro (2022) уже в продаже!",
-        "btn_text": "Купить",
-        "img": "wide_slide1_img.png"
+        "title": "For those who aspire to be",
+        "fancy_title": "a winner",
+        "subtitle": "Apple iPad Pro (2022) is on sale now!",
+        "btn_text": "Buy",
+        "img": "https://drive.google.com/thumbnail?id=1aKE939A64KEisGEsWfy0tbS8BCp2yJyf&sz=w1000"
       },
       {
-        "title": "Для тех, кто стремится стать",
-        "fancy_title": "победителем",
-        "subtitle": "Apple iPad Pro (2022) уже в продаже!",
-        "btn_text": "Купить",
-        "img": "wide_slide1_img.png"
+        "title": "For those who aspire to be",
+        "fancy_title": "a winner",
+        "subtitle": "Apple iPad Pro (2022) is on sale now!",
+        "btn_text": "Buy",
+        "img": "https://drive.google.com/thumbnail?id=1aKE939A64KEisGEsWfy0tbS8BCp2yJyf&sz=w1000"
       },
       {
-        "title": "Для тех, кто стремится стать",
-        "fancy_title": "победителем",
-        "subtitle": "Apple iPad Pro (2022) уже в продаже!",
-        "btn_text": "Купить",
-        "img": "./icons/wide_slide1_img.png"
+        "title": "For those who aspire to be",
+        "fancy_title": "a winner",
+        "subtitle": "Apple iPad Pro (2022) is on sale now!",
+        "btn_text": "Buy",
+        "img": "https://drive.google.com/thumbnail?id=1aKE939A64KEisGEsWfy0tbS8BCp2yJyf&sz=w1000"
+      }
+    ],
+    "2_ad_grid": [
+      {
+        "title": "Smartphones",
+        "subtitle": "Apple iPhone 14 Pro Max, iPhone 14 Pro",
+        "img": "https://drive.google.com/thumbnail?id=145jQgD1Qek6o42QYNh3ls7zDtWm6bJao&sz=w1000"
+      },
+      {
+        "title": "MP Merch",
+        "subtitle": "Sweatshirts, T-shirts, polos, hoodies",
+        "img": "https://drive.google.com/thumbnail?id=1UTtPYjCE79QV2ak9a6AEqystMJvNWIsR&sz=w1000"
+      },
+      {
+        "title": "Musical equipment",
+        "subtitle": "Headphones, JBL speakers, records",
+        "img": "https://drive.google.com/thumbnail?id=1dJxuJzv6Qoi03l043D1l8-61B4aGgU5n&sz=w1000"
+      },
+      {
+        "title": "Sport",
+        "subtitle": "Clubs and accessories for comfortable golf",
+        "img": "https://drive.google.com/thumbnail?id=1TdPClDSfsUjdwKdrpJqaXNGHIHmAhqbq&sz=w1000"
+      },
+      {
+        "title": "Alcohol",
+        "subtitle": "Whiskey, wine",
+        "img": "https://drive.google.com/thumbnail?id=1ts3hH4lAemYD8abU42rGcGghov4ksxJ7&sz=w1000"
+      },
+      {
+        "title": "Watch",
+        "subtitle": "Apple Watch Ultra, Apple Watch Series 8",
+        "img": "https://drive.google.com/thumbnail?id=1VndlCZaFxX3EsZVCKMGiK-FOQCgP2fPX&sz=w1000"
+      }
+    ],
+    "3_catalog_slider": [
+      {
+        "price": "120,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=10Cvk2VbWn-IrSXD7T0oy52r_JFfgSGWr&sz=w1000",
+        "title": "Apple Watch Ultra 2 GPS + Cellular, 49 мм"
+      },
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=1OEcvbJeq86gw5lrKO0u7CMH_L6U7cEC2&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
+      },
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=1HQW4LVnNPhQVM4b_2-ufxFrlLTb_N-p_&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
+      },
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=12011ltZdl_fCKoIkQt6XKX-nSPMSAK0Y&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
+      },
+      {
+        "price": "120,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=10Cvk2VbWn-IrSXD7T0oy52r_JFfgSGWr&sz=w1000",
+        "title": "Apple Watch Ultra 2 GPS + Cellular, 49 мм"
+      },
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=1OEcvbJeq86gw5lrKO0u7CMH_L6U7cEC2&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
+      },
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=1HQW4LVnNPhQVM4b_2-ufxFrlLTb_N-p_&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
+      },
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=12011ltZdl_fCKoIkQt6XKX-nSPMSAK0Y&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
+      }
+    ],
+    "4_catalog_slider": [
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=1EqDK5xxme9f9qKW_IouRM9x3_1RFieH3&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
+      },
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=1ODcQWQp7y80qc9UJERk-AiT5-HdxXK8E&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
+      },
+      {
+        "price": "50,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=1Yqh44VLTEArJ-8s0zopI-81EanvFRQh8&sz=w1000",
+        "title": "Apple AirPods Pro (2022), white"
+      },
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=10SXn9DAhCaeAlmAB-hIJYMLRkUJnux8d&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
+      },
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=1EqDK5xxme9f9qKW_IouRM9x3_1RFieH3&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
+      },
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=1ODcQWQp7y80qc9UJERk-AiT5-HdxXK8E&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
+      },
+      {
+        "price": "50,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=1Yqh44VLTEArJ-8s0zopI-81EanvFRQh8&sz=w1000",
+        "title": "Apple AirPods Pro (2022), white"
+      },
+      {
+        "price": "90,000",
+        "oldPrice": "100,000",
+        "img": "https://drive.google.com/thumbnail?id=10SXn9DAhCaeAlmAB-hIJYMLRkUJnux8d&sz=w1000",
+        "title": "Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone"
       }
     ]
   },

@@ -24,112 +24,15 @@
       :modules="modules"
       class="mySwiper"
     >
-      <swiper-slide>
+      <swiper-slide v-for="el in store.data.home['3_catalog_slider']">
         <div class="slide">
-          <img src="./icons/small_slider_1_1.png" alt="" class="img" />
+          <img :src="el.img" alt="" class="img" />
           <div class="desc">
             <div class="price_container">
-              <div class="price">120,000</div>
-              <div class="subprice">100,000</div>
+              <div class="price">{{ el.price }} MP</div>
+              <div class="subprice">{{ el.oldPrice }}</div>
             </div>
-            <div class="subtitle">Apple Watch Ultra 2 GPS + Cellular, 49 мм</div>
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="slide">
-          <img src="./icons/small_slider_1_2.png" alt="" class="img" />
-          <div class="desc">
-            <div class="price_container">
-              <div class="price">90,000 MP</div>
-              <div class="subprice">100,000</div>
-            </div>
-            <div class="subtitle">
-              Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone
-            </div>
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="slide">
-          <img src="./icons/small_slider_1_3.png" alt="" class="img" />
-          <div class="desc">
-            <div class="price_container">
-              <div class="price">90,000 MP</div>
-              <div class="subprice">100,000</div>
-            </div>
-            <div class="subtitle">
-              Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone
-            </div>
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="slide">
-          <img src="./icons/small_slider_1_4.png" alt="" class="img" />
-          <div class="desc">
-            <div class="price_container">
-              <div class="price">90,000 MP</div>
-              <div class="subprice">100,000</div>
-            </div>
-            <div class="subtitle">
-              Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone
-            </div>
-          </div>
-        </div>
-      </swiper-slide>
-      <!-- duplicated slides for looping -->
-      <swiper-slide>
-        <div class="slide">
-          <img src="./icons/small_slider_1_1.png" alt="" class="img" />
-          <div class="desc">
-            <div class="price_container">
-              <div class="price">120,000</div>
-              <div class="subprice">100,000</div>
-            </div>
-            <div class="subtitle">Apple Watch Ultra 2 GPS + Cellular, 49 мм</div>
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="slide">
-          <img src="./icons/small_slider_1_2.png" alt="" class="img" />
-          <div class="desc">
-            <div class="price_container">
-              <div class="price">90,000 MP</div>
-              <div class="subprice">100,000</div>
-            </div>
-            <div class="subtitle">
-              Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone
-            </div>
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="slide">
-          <img src="./icons/small_slider_1_3.png" alt="" class="img" />
-          <div class="desc">
-            <div class="price_container">
-              <div class="price">90,000 MP</div>
-              <div class="subprice">100,000</div>
-            </div>
-            <div class="subtitle">
-              Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone
-            </div>
-          </div>
-        </div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="slide">
-          <img src="./icons/small_slider_1_4.png" alt="" class="img" />
-          <div class="desc">
-            <div class="price_container">
-              <div class="price">90,000 MP</div>
-              <div class="subprice">100,000</div>
-            </div>
-            <div class="subtitle">
-              Apple iPhone 13, 128 GBApple iPhone 13, 128 GBApple iPhone
-            </div>
+            <div class="subtitle">{{ el.title }}</div>
           </div>
         </div>
       </swiper-slide>
@@ -141,6 +44,7 @@ import { ref } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import { Navigation } from 'swiper/modules';
+import { useGlobalStore } from '@/stores/store';
 
 export default {
   components: {
@@ -148,12 +52,14 @@ export default {
     SwiperSlide,
   },
   setup() {
+    const store = useGlobalStore();
     const prev = ref(null);
     const next = ref(null);
     return {
       modules: [Navigation],
       prev,
       next,
+      store,
     };
   },
 };
@@ -219,12 +125,14 @@ export default {
   display: block;
   width: 100%;
   height: 100%;
+  height: 350px;
   object-fit: cover;
 }
 .slide {
   display: flex;
   flex-direction: column;
-  max-height: 425px;
+  /* max-height: 425px; */
+  max-height: 480px;
   border-radius: 16px;
   background: #fff;
 }
@@ -239,7 +147,7 @@ export default {
 .slide .desc .price_container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 8px;
 }
