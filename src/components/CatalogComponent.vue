@@ -40,7 +40,9 @@
       <!-- <div style="color: black">{{ category }}</div> -->
       <!-- <div>{{ filteredData }}</div> -->
       <div class="item" v-for="el in filteredData">
-        <img :src="el.img" alt="item_image" class="item_img" />
+        <!-- @TODO: replace gallery for img -->
+        <img :src="el.gallery[0]" alt="item_image" class="item_img" />
+        <!-- <img :src="el.img" alt="item_image" class="item_img" /> -->
         <div class="item_footer">
           <div class="item_price">
             {{ el.value }} MP
@@ -136,10 +138,19 @@ watch([value, selectedBrands], async () => {
       .filter((el) => el.value >= value.value[0] && el.value <= value.value[1])
       .filter((el) => [...selectedCategories.value].includes(el.category))
       .filter((el) => [...selectedBrands.value].includes(el.brand));
+    // } else if ([...selectedCategories.value].length == 0) {
+    //   filteredData = catalog.filter(
+    //     (el) => el.value >= value.value[0] && el.value <= value.value[1]
+    //   );
+    //   selectedBrands.value = [];
+    //   displayBrand.value = false;
+    // } else {
+    //   filteredData = catalog
+    //     .filter((el) => el.value >= value.value[0] && el.value <= value.value[1])
+    //     .filter((el) => [...selectedCategories.value].includes(el.category));
+    // }
   } else {
-    filteredData = catalog
-      .filter((el) => el.value >= value.value[0] && el.value <= value.value[1])
-      .filter((el) => [...selectedCategories.value].includes(el.category));
+    return null;
   }
 });
 </script>
@@ -234,8 +245,8 @@ watch([value, selectedBrands], async () => {
   height: 425px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
 }
 .item .item_img {
   border-radius: 16px 16px 0 0;
