@@ -48,8 +48,8 @@
               <div class="item_price_bait">{{ Math.floor(el.value * 1.2) }} MP</div>
             </div>
             <div class="item_name">{{ el.name }}</div>
-            <div class="item_btn">
-              <div @click="addToCart(el)" class="btn_text">Add to cart</div>
+            <div @click="addToCart(el)" class="item_btn">
+              <div class="btn_text">Add to cart</div>
             </div>
           </div>
         </div>
@@ -69,8 +69,6 @@ const props = defineProps(['category']);
 // const data = json;
 const data = store.data;
 const cart = store.cart;
-console.log(cart.length);
-console.log(cart);
 const addToCart = (el) => {
   if (cart.length && cart.length > 1) {
     if (!cart.includes(el)) {
@@ -317,6 +315,7 @@ watch([value, selectedBrands], async () => {
   text-align: center;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  z-index: 5;
 }
 .btn_text {
   display: none;
