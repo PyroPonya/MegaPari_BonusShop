@@ -54,7 +54,11 @@
         <div class="img_glass"></div>
         <input type="text" class="search" placeholder="Найти" />
         <div class="img_heart"></div>
-        <div class="img_cart"></div>
+        <div class="img_cart">
+          <div v-if="cart.length && cart.length > 0" class="cart_counter">
+            {{ cart.length }}
+          </div>
+        </div>
       </div>
       <div class="profile">Profile&nbsp;section</div>
     </div>
@@ -70,6 +74,7 @@ const storeRefs = storeToRefs(useGlobalStore());
 // import json from '../stores/test.json';
 // const data = json;
 const data = store.data;
+const cart = store.cart;
 const catalog = data.catalog;
 const categories_pre = Object.values(catalog.map((el) => el.category));
 const categories = ref([]);
@@ -174,6 +179,7 @@ uniqueList(categories_pre, categories.value);
   width: 20px;
 }
 .img_cart {
+  position: relative;
   background-image: url('./icons/Cart.svg');
   background-position: center;
   display: flex;
@@ -181,6 +187,31 @@ uniqueList(categories_pre, categories.value);
   align-items: center;
   height: 20px;
   width: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.img_cart:hover {
+  transform: scale(1.05);
+}
+.cart_counter {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -50%;
+  right: -50%;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  /* background-color: black; */
+  border: 1px solid #000000;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
 }
 .profile {
   display: flex;

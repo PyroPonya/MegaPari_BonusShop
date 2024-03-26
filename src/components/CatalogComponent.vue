@@ -37,18 +37,21 @@
       <!-- brands end -->
     </div>
     <div class="catalog_display">
-      <!-- <div style="color: black">{{ category }}</div> -->
-      <!-- <div>{{ filteredData }}</div> -->
       <div class="item" v-for="el in filteredData">
-        <!-- @TODO: replace gallery for img -->
-        <img :src="el.gallery[0]" alt="item_image" class="item_img" />
-        <!-- <img :src="el.img" alt="item_image" class="item_img" /> -->
-        <div class="item_footer">
-          <div class="item_price">
-            {{ el.value }} MP
-            <div class="item_price_bait">{{ Math.floor(el.value * 1.2) }} MP</div>
+        <div class="item_content">
+          <!-- @TODO: replace gallery for img -->
+          <img :src="el.gallery[0]" alt="item_image" class="item_img" />
+          <!-- <img :src="el.img" alt="item_image" class="item_img" /> -->
+          <div class="item_footer">
+            <div class="item_price">
+              {{ el.value }} MP
+              <div class="item_price_bait">{{ Math.floor(el.value * 1.2) }} MP</div>
+            </div>
+            <div class="item_name">{{ el.name }}</div>
+            <div class="item_btn">
+              <div @click="addToCart(el)" class="btn_text">Add to cart</div>
+            </div>
           </div>
-          <div class="item_name">{{ el.name }}</div>
         </div>
       </div>
     </div>
@@ -65,6 +68,18 @@ const props = defineProps(['category']);
 // import json from '../stores/test.json';
 // const data = json;
 const data = store.data;
+const cart = store.cart;
+console.log(cart.length);
+console.log(cart);
+const addToCart = (el) => {
+  if (cart.length && cart.length > 1) {
+    if (!cart.includes(el)) {
+      cart.push(el);
+    }
+  } else {
+    cart.push(el);
+  }
+};
 const catalog = data.catalog;
 // filter values
 const arr = Object.values(catalog.map((el) => el.value));
@@ -238,7 +253,8 @@ watch([value, selectedBrands], async () => {
   text-transform: capitalize;
 }
 /* item styles */
-.item {
+.item,
+.item_content {
   background-color: #ffffff;
   border-radius: 16px;
   width: 286px;
@@ -247,6 +263,7 @@ watch([value, selectedBrands], async () => {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  transition: all 0.2s ease-in-out;
 }
 .item .item_img {
   border-radius: 16px 16px 0 0;
@@ -257,6 +274,7 @@ watch([value, selectedBrands], async () => {
   padding: 16px;
   width: 100%;
   max-height: 132px;
+  max-width: 286px;
 }
 .item .item_price {
   font-weight: 600;
@@ -284,7 +302,48 @@ watch([value, selectedBrands], async () => {
   line-height: 150%;
   color: #6c6c6c;
 }
-
+.item_btn {
+  display: flex;
+  justify-content: center;
+  /* display: none; */
+  height: 46px;
+  max-height: 0px;
+  padding: 0px 16px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 16px;
+  border: 0px solid #f1f1f1;
+  background: #f9fafb;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.btn_text {
+  display: none;
+  display: flex;
+  color: #000;
+  font-family: Inter;
+  font-size: 0px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%;
+  transition: all 0.3s ease-in-out;
+}
+.item:hover .item_content {
+  transform: scale(1.05);
+}
+.item:hover .item_btn {
+  /* display: flex; */
+  max-height: 46px;
+  border: 1px solid #f1f1f1;
+}
+.item_btn:hover {
+  background-color: #e6e7e7;
+}
+.item:hover .btn_text {
+  font-size: 16px;
+  display: flex;
+}
 @layer primevue {
   .p-checkbox-input {
     border: 1.5px solid #9d9d9d;

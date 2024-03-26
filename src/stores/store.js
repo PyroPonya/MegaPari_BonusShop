@@ -9,7 +9,8 @@ export const useGlobalStore = defineStore('Store', () => {
     try_password: '',
   });
   const showMenu = ref(false);
+  const cart = ref([]);
   const data = ref([]);
 
-  return { loginPlaceholder, showMenu, data };
+  return { loginPlaceholder, showMenu, cart, data };
 });
