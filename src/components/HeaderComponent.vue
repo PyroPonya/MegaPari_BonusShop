@@ -64,8 +64,8 @@
         <div class="img_heart"></div>
         <router-link to="/cart">
           <div class="img_cart">
-            <div v-if="cart.length && cart.length > 0" class="cart_counter">
-              {{ cart.length }}
+            <div v-if="store.cart.length && store.cart.length > 0" class="cart_counter">
+              {{ store.cart.length }}
             </div>
           </div>
         </router-link>
@@ -80,9 +80,7 @@ import { useGlobalStore } from '@/stores/store';
 import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
 const store = useGlobalStore();
-const storeRefs = storeToRefs(useGlobalStore());
 const data = store.data;
-const cart = store.cart;
 const catalog = data.catalog;
 const categories_pre = Object.values(catalog.map((el) => el.category));
 const categories = ref([]);
