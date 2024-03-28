@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router';
 import MainView from '../views/MainView.vue';
 import CatalogView from '../views/CatalogView.vue';
+import CartView from '../views/CartView.vue';
 
 const router = createRouter({
   // history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,6 +17,11 @@ const router = createRouter({
       name: 'catalog',
       component: CatalogView,
       props: true,
+    },
+    {
+      path: '/cart',
+      name: 'cart',
+      component: CartView,
     },
     {
       path: '/:pathMatch(.*)*',

@@ -35,7 +35,15 @@
             >
               <div class="items_el" @click="store.showMenu = !store.showMenu">All</div>
             </router-link>
-            <div class="subitems_el" @click="store.showMenu = !store.showMenu">
+            <!-- @TODO: submenu items -->
+            <router-link
+              to="/catalog/all"
+              :category="'all'"
+              @click="store.showMenu = !store.showMenu"
+            >
+              <div class="subitems_el" @click="store.showMenu = !store.showMenu">WiP</div>
+            </router-link>
+            <!-- <div class="subitems_el" @click="store.showMenu = !store.showMenu">
               Phones
             </div>
             <div class="subitems_el" @click="store.showMenu = !store.showMenu">
@@ -46,7 +54,7 @@
             </div>
             <div class="subitems_el" @click="store.showMenu = !store.showMenu">
               Laptops, tablets
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -54,11 +62,13 @@
         <div class="img_glass"></div>
         <input type="text" class="search" placeholder="Найти" />
         <div class="img_heart"></div>
-        <div class="img_cart">
-          <div v-if="cart.length && cart.length > 0" class="cart_counter">
-            {{ cart.length }}
+        <router-link to="/cart">
+          <div class="img_cart">
+            <div v-if="cart.length && cart.length > 0" class="cart_counter">
+              {{ cart.length }}
+            </div>
           </div>
-        </div>
+        </router-link>
       </div>
       <div class="profile">Profile&nbsp;section</div>
     </div>
@@ -71,8 +81,6 @@ import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
 const store = useGlobalStore();
 const storeRefs = storeToRefs(useGlobalStore());
-// import json from '../stores/test.json';
-// const data = json;
 const data = store.data;
 const cart = store.cart;
 const catalog = data.catalog;

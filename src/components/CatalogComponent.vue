@@ -44,12 +44,14 @@
           <!-- <img :src="el.img" alt="item_image" class="item_img" /> -->
           <div class="item_footer">
             <div class="item_price">
-              {{ el.value }} MP
-              <div class="item_price_bait">{{ Math.floor(el.value * 1.2) }} MP</div>
+              {{ el.value.toLocaleString('en-US') }} MP
+              <div class="item_price_bait">
+                {{ Math.floor(el.value * 1.2).toLocaleString('en-US') }} MP
+              </div>
             </div>
             <div class="item_name">{{ el.name }}</div>
-            <div @click="addToCart(el)" class="item_btn">
-              <div class="btn_text">Add to cart</div>
+            <div @click="addToCart(el)" class="item_btn noselect">
+              <div class="btn_text noselect">Add to cart</div>
             </div>
           </div>
         </div>
@@ -70,12 +72,14 @@ const props = defineProps(['category']);
 const data = store.data;
 const cart = store.cart;
 const addToCart = (el) => {
-  if (cart.length && cart.length > 1) {
-    if (!cart.includes(el)) {
-      cart.push(el);
+  if (cart.length && cart.length > 0) {
+    if (!cart.map((item) => item.item).includes(el)) {
+      cart.push({ item: el, quantity: 1 });
+    } else {
+      cart.filter((item) => (item.item == el ? (item.quantity += 1) : ''));
     }
   } else {
-    cart.push(el);
+    cart.push({ item: el, quantity: 1 });
   }
 };
 const catalog = data.catalog;
@@ -339,9 +343,21 @@ watch([value, selectedBrands], async () => {
 .item_btn:hover {
   background-color: #e6e7e7;
 }
+.item_btn:active {
+  background-color: #9d9e9e;
+}
 .item:hover .btn_text {
   font-size: 16px;
   display: flex;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 @layer primevue {
   .p-checkbox-input {
